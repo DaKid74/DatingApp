@@ -38,6 +38,7 @@ namespace DatingApp.API
             });
             services.AddControllers();
             services.AddCors();
+            services.AddScoped<LogUserActivity>();
             services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
             services.AddAutoMapper();
             services.AddTransient<Seed>();
